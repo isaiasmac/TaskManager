@@ -9,7 +9,7 @@
 import Cocoa
 
 protocol TaskProtocol {
-    func didCreatedTask(task: Task)
+    func didCreatedTask(_ task: Task)
 }
 
 class CreateTaskVC: NSViewController {
@@ -18,9 +18,10 @@ class CreateTaskVC: NSViewController {
     @IBOutlet weak var descriptionTextField: NSTextField!
     @IBOutlet weak var emojisPopup: NSPopUpButton!
     
-    private let manager = CoreDataManager()
-    
     var delegate: TaskProtocol?
+    
+    var dateSelected: Date?
+    var context: NSManagedObjectContext?
     
     
     override func viewDidLoad() {
@@ -40,9 +41,6 @@ class CreateTaskVC: NSViewController {
     }
     
     @IBAction func saveAction(_ sender: NSButton) {
-        print("\(#function)")
-        
-        
         let title = titleTextField.stringValue
         let description = descriptionTextField.stringValue
         var label: String? = "✍️"
@@ -57,34 +55,13 @@ class CreateTaskVC: NSViewController {
             return
         }
         
-        let appDelegate = NSApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-        
-        let task = Task(context: context)
-        task.title = title
-        task.comments = description
-        task.label = label
-        task.created = Date()
-        
-        do {
-            try context.save()
-            debugPrint("Saved OK!")
-            self.delegate?.didCreatedTask(task: task)
+        let params: [String: Any] = ["title": title, "comments": description,
+                                     "label": label ?? "✍️", "date": dateSelected!]
+        let taskService = TaskService(self.context!)
+        taskService.save(params) { task in
+            self.delegate?.didCreatedTask(task)
             self.dismiss(nil)
         }
-        catch {
-            debugPrint("SAVE Error: \(error.localizedDescription)")
-        }
-        
-//        let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
-//        do {
-//            let result = try context.fetch(fetchRequest)
-//            debugPrint(result)
-//        }
-//        catch {
-//            debugPrint("Fetch Error: \(error.localizedDescription)")
-//        }
-        
     }
     
     
