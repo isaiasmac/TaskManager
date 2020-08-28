@@ -20,7 +20,7 @@ class TaskCellView: NSTableCellView {
         self.layer?.backgroundColor = .white
         wrapperView.wantsLayer = true
         
-        wrapperView.layer?.backgroundColor = NSColor(calibratedRed: 0.97, green: 0.97, blue: 0.97, alpha: 1.0).cgColor
+        wrapperView.layer?.backgroundColor = #colorLiteral(red: 0.5960784314, green: 0.5960784314, blue: 0.6156862745, alpha: 1)
         wrapperView.layer?.cornerRadius = 6
         
         nameTextField.maximumNumberOfLines = 1

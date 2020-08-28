@@ -47,11 +47,11 @@ class TasksListVC: NSViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.usesAlternatingRowBackgroundColors = false
-        tableView.backgroundColor = .white
+        tableView.backgroundColor = .clear
         
         emptyMessageTextField.isHidden = true
         
-        self.nsBox.fillColor = NSColor(calibratedRed: 1.00, green: 0.80, blue: 0.00, alpha: 1.00)
+        //self.nsBox.fillColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         
         let df = Utils.dateFormatted(dateFormatter: appDelegate.dateFormatter, self.dateSelected)
         setDateButton(dateStr: df.dateStr)

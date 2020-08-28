@@ -14,7 +14,7 @@ class WindowController: NSWindowController {
         super.windowDidLoad()
         
         self.window?.titleVisibility = .hidden
-        self.window?.backgroundColor = NSColor(calibratedRed: 1.00, green: 0.80, blue: 0.00, alpha: 1.00)
+        self.window?.backgroundColor = NSColor(named: "dateHeaderColor")
     }
     
 }

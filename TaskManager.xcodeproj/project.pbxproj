@@ -13,12 +13,13 @@
 		6A468EE224F09C4A004762F6 /* TaskCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A468EE124F09C4A004762F6 /* TaskCellView.swift */; };
 		6A468EE624F09D8C004762F6 /* TasksListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A468EE524F09D8C004762F6 /* TasksListVC.swift */; };
 		6A4C001E24F358A800EC4F30 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4C001D24F358A800EC4F30 /* Utils.swift */; };
-		6A4CFFFB24F3325B00EC4F30 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6A4CFFF924F3325B00EC4F30 /* Model.xcdatamodeld */; };
+		6A4CFFFB24F3325B00EC4F30 /* taskmanager_model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6A4CFFF924F3325B00EC4F30 /* taskmanager_model.xcdatamodeld */; };
 		6A4CFFFD24F3338900EC4F30 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4CFFFC24F3338900EC4F30 /* CoreDataManager.swift */; };
 		6AAC6AD524F7239800D9A6AC /* TaskService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAC6AD424F7239800D9A6AC /* TaskService.swift */; };
 		6AB7F7F324F1EA8000C9CC62 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB7F7F124F1EA8000C9CC62 /* WindowController.swift */; };
 		6AB7F7F724F20D2200C9CC62 /* CreateTaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB7F7F524F20D2200C9CC62 /* CreateTaskVC.swift */; };
 		6AC8EC8924F48EED0084DE77 /* DatePickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC8EC8724F48EED0084DE77 /* DatePickerVC.swift */; };
+		6ADDB60A24F779A800D688F7 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADDB60924F779A800D688F7 /* Button.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		6AB7F7F124F1EA8000C9CC62 /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		6AB7F7F524F20D2200C9CC62 /* CreateTaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskVC.swift; sourceTree = "<group>"; };
 		6AC8EC8724F48EED0084DE77 /* DatePickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerVC.swift; sourceTree = "<group>"; };
+		6ADDB60924F779A800D688F7 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,15 +72,15 @@
 			isa = PBXGroup;
 			children = (
 				6A468ECF24F08D69004762F6 /* AppDelegate.swift */,
-				6A4C001D24F358A800EC4F30 /* Utils.swift */,
-				6AAC6AD324F7234D00D9A6AC /* Model */,
-				6A468EE324F09D5A004762F6 /* Controllers */,
-				6A468EE424F09D62004762F6 /* View */,
 				6A468ED324F08D70004762F6 /* Assets.xcassets */,
-				6A468ED524F08D70004762F6 /* Main.storyboard */,
-				6A4CFFF924F3325B00EC4F30 /* Model.xcdatamodeld */,
+				6A468EE324F09D5A004762F6 /* Controllers */,
 				6A468ED824F08D70004762F6 /* Info.plist */,
+				6A468ED524F08D70004762F6 /* Main.storyboard */,
+				6AAC6AD324F7234D00D9A6AC /* Model */,
+				6A4CFFF924F3325B00EC4F30 /* taskmanager_model.xcdatamodeld */,
 				6A468ED924F08D70004762F6 /* TaskManager.entitlements */,
+				6A4C001D24F358A800EC4F30 /* Utils.swift */,
+				6A468EE424F09D62004762F6 /* View */,
 			);
 			path = TaskManager;
 			sourceTree = "<group>";
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				6A468EE124F09C4A004762F6 /* TaskCellView.swift */,
+				6ADDB60924F779A800D688F7 /* Button.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -188,9 +191,10 @@
 				6AB7F7F724F20D2200C9CC62 /* CreateTaskVC.swift in Sources */,
 				6A468EE624F09D8C004762F6 /* TasksListVC.swift in Sources */,
 				6A4CFFFD24F3338900EC4F30 /* CoreDataManager.swift in Sources */,
-				6A4CFFFB24F3325B00EC4F30 /* Model.xcdatamodeld in Sources */,
+				6A4CFFFB24F3325B00EC4F30 /* taskmanager_model.xcdatamodeld in Sources */,
 				6AC8EC8924F48EED0084DE77 /* DatePickerVC.swift in Sources */,
 				6A4C001E24F358A800EC4F30 /* Utils.swift in Sources */,
+				6ADDB60A24F779A800D688F7 /* Button.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +332,7 @@
 				CODE_SIGN_ENTITLEMENTS = TaskManager/TaskManager.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = M5H4A2L5D7;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = TaskManager/Info.plist;
@@ -335,6 +340,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = io.isaiasmac.TaskManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -348,6 +354,7 @@
 				CODE_SIGN_ENTITLEMENTS = TaskManager/TaskManager.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = M5H4A2L5D7;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = TaskManager/Info.plist;
@@ -355,6 +362,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = io.isaiasmac.TaskManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -385,13 +393,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		6A4CFFF924F3325B00EC4F30 /* Model.xcdatamodeld */ = {
+		6A4CFFF924F3325B00EC4F30 /* taskmanager_model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				6A4CFFFA24F3325B00EC4F30 /* Model.xcdatamodel */,
 			);
 			currentVersion = 6A4CFFFA24F3325B00EC4F30 /* Model.xcdatamodel */;
-			path = Model.xcdatamodeld;
+			path = taskmanager_model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
