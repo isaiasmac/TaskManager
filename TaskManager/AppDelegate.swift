@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import Sparkle
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -32,6 +33,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @IBAction func showPreferences(_ sender: NSMenuItem) {
         print("Mostrar ventana preferencias.")
+    }
+    
+    @IBAction func checkForUpdates(_ sender: SUUpdater) {
+        print("\(#function) sender: \(sender)")
     }
     
 }

@@ -33,3 +33,5 @@ DerivedData/
 # Generated files
 *.o
 *.pyc
+Podfile
+Pods/
